@@ -1,0 +1,12 @@
+<?php
+/** @var $block \Hibrido\Metatag\Block\Metatag */
+
+$links = $block->getAlternateLinks();
+
+if (!empty($links)) :
+	foreach ($links as $link):
+?>
+	<link rel="alternate" hreflang="<?= $link['storeLanguage'] ?>" href="<?= $link['href'] ?>" />
+
+<?php endforeach; ?>
+<?php endif; ?>
